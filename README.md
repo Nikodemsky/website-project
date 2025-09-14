@@ -73,7 +73,7 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress i
 	Deny from all
 </FilesMatch>
 ```
-\- any kind of .php files should not be present in that folder, or even run from
+\- any kind of .php files should not be present in that folder, or even run from.
 
 5. For /wp-includes/ folder
 .htaccess with:
@@ -92,12 +92,12 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress i
 \- same as above + handle wp-tinymce.php and ms-files.php properly.
 
 6. Database credentials
-* db_name != db_user
-* strong password
-* the database CAN'T be shared between websites
+* db_name != db_user;
+* strong password;
+* the database CAN'T be shared between websites.
 
 7. Accounts
-NO "admin" "wp_admin" or any kind of "admin" suffix/prefix related account names
+* NO "admin" "wp_admin" or any kind of "admin" suffix/prefix related account names.
 
 8. If possible, then set BasicAuth for login page.
 
