@@ -63,7 +63,7 @@ define( 'WP_POST_REVISIONS', 10 ); // We don't want to have too much of revision
 define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress internal site-health.php, since it's too confusing for clients and too time consuming to explain each time why some of those "errors" are not actually viable, also we are handling website maintenance by ourselfs, so there's no need for such third-party tool
 ```
 
-* Fresh SALT keys after deploying to production.
+* Fresh set of SALT keys after deploying to production.
 
 4. For /uploads/ folder
 .htaccess with:
@@ -99,7 +99,7 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress i
 7. Accounts
 * NO "admin" "wp_admin" or any kind of "admin" suffix/prefix related account names.
 
-8. If possible, then set BasicAuth for login page.
+8. If possible, set BasicAuth for login page (wp-login.php/wp-admin).
 
 9. If possible, set 2FA.
 
