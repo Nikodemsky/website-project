@@ -27,47 +27,57 @@ Pretty much only viable option is WPML; Polylang have too many paywalled options
 
 1. NO heavyweight security engines like Wordfence.
 2. For .htaccess in root folder:
-
+```
 <FilesMatch "wp-config.*\.php|\.htaccess|readme\.html">
 Order allow,deny
 Deny from all
 </FilesMatch>
-- we don't want anyone to access those.
-
+```
+\- we don't want anyone to access those.
+```
 RewriteCond %{QUERY_STRING} author=\d
 RewriteRule ^ /? [L,R=301]
-- disable user enumeration
+```
+\- disable user enumeration
 
 3. For wp-config.php:
 
 * Move DB credentials to another file, for example:
+```
 // DB credentials
 require_once "db-001x.php";
-
+```
 * Disable Debug completely
+```
 // Debug
 define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', false );
 define( 'WP_DEBUG_DISPLAY', false );
 @ini_set( 'display_errors', 0 );
+```
 
 * Additional defines
+```
 define(	'DISALLOW_FILE_EDIT', true); // Disable file edits from CMS
 define( 'WP_POST_REVISIONS', 10 ); // We don't want to have too much of revisions for each post/page
 define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress internal site-health.php, since it's too confusing for clients and too time consuming to explain each time why some of those "errors" are not actually viable, also we are handling website maintenance by ourselfs, so there's no need for such third-party tool
+```
 
 * Fresh SALT keys after deploying to production.
 
 4. For /uploads/ folder
 .htaccess with:
+```
 <FilesMatch "\.(?i:php)$">
 	Order allow,deny
 	Deny from all
 </FilesMatch>
-- any kind of .php files should not be present in that folder, or even run from
+```
+\- any kind of .php files should not be present in that folder, or even run from
 
 5. For /wp-includes/ folder
 .htaccess with:
+```
 <FilesMatch "\.(?i:php)$">
 	Order allow,deny
 	Deny from all
@@ -78,7 +88,8 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress i
 <Files ms-files.php>
 	Allow from all
 </Files>
-- same as above + handle wp-tinymce.php and ms-files.php properly.
+```
+\- same as above + handle wp-tinymce.php and ms-files.php properly.
 
 6. Database credentials
 * db_name != db_user
