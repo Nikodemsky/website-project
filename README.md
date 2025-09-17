@@ -94,6 +94,7 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress i
 6. Database credentials
 * db_name != db_user;
 * strong password;
+* table prefix CANNOT start with wp_
 * the database CAN'T be shared between websites.
 
 7. Accounts
