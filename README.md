@@ -59,8 +59,6 @@ define( 'WP_DEBUG_DISPLAY', false );
 * Additional defines
 ```
 define(	'DISALLOW_FILE_EDIT', true); // Disable file edits from CMS
-define( 'WP_POST_REVISIONS', 10 ); // We don't want to have too much of revisions for each post/page
-define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true); // We are disabling Wordpress internal site-health.php, since it's too confusing for clients and too time consuming to explain each time why some of those "errors" are not actually viable, also we are handling website maintenance by ourselfs, so there's no need for such third-party tool
 ```
 
 * Fresh set of SALT keys after deploying to production.
