@@ -1,6 +1,6 @@
 ### CMS Engine
 
-The choosen engine for all the projects at the moment is native Wordpress (hosted); eventually i'm keen on switching to ClassicPress (https://www.classicpress.net), but while there's still some plugins of choose using React and modules from native WP, thus switch is not fully possible at the moment.
+The choosen engine for all the projects at the moment is native Wordpress (hosted); eventually i'm keen on switching to [ClassicPress](https://www.classicpress.net), but while there's still some plugins of choose using React and modules from native WP, thus switch is not fully possible at the moment.
 
 ### Plugins used
 
@@ -21,7 +21,8 @@ The choosen engine for all the projects at the moment is native Wordpress (hoste
 
 ### Translations handling
 
-Pretty much only viable option is WPML; Polylang have too many paywalled options and can cause some "weird" problems, while WPML can even provide extended support for not always related issues. It's kind of heavy for the installation and I would prefer using plugins like BOGO (https://wordpress.org/plugins/bogo/), but realistically speaking it's not really possible, because of the limitations.
+Pretty much only viable option is WPML; Polylang have too many paywalled options and can cause some "weird" problems, while WPML can even provide extended support for not always related issues.
+It's kind of heavy for the installation and I would prefer using plugins like [BOGO](https://wordpress.org/plugins/bogo/), but realistically speaking it's not really possible, because of the limitations.
 
 ### Security measures
 
