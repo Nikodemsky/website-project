@@ -21,8 +21,8 @@ The choosen engine for all the projects at the moment is native Wordpress (hoste
 
 ### Translations handling
 
-Pretty much only viable option is WPML; Polylang have too many paywalled options and can cause some "weird" problems, while WPML can even provide extended support for not always related issues.
-It's kind of heavy for the installation and I would prefer using plugins like [BOGO](https://wordpress.org/plugins/bogo/), but realistically speaking it's not really possible, because of the limitations.
+For really small projects either [BOGO](https://wordpress.org/plugins/bogo/) or [Sublanguage](https://github.com/maximeschoeni/sublanguage).
+Anything bigger goes with either WPML or Polylang, since nothing else has much support in enough support in extending.
 
 ### Security measures
 
